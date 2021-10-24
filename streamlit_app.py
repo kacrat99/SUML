@@ -33,7 +33,10 @@ option = st.selectbox(
 if option == "Angielski -> Niemiecki":
     text = st.text_area(label="Wpisz tekst")
     if text:
-        translator = pipeline("translation_en_to_de")
-        answer = translator(text)
+        with st.spinner("Tlumaczenie tekstu, prosze czekac..."):
+            translator = pipeline("translation_en_to_de")
+            answer = translator(text)
+        st.success('Przetlumaczone')
+        
         st.code(answer[0]['translation_text'])
 
