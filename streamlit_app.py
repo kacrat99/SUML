@@ -5,7 +5,7 @@ import matplotlib as plt
 import os
 
 
-
+st.header('s18754')
 st.header('translator')
 # header to jeden z podtytułów wykorzystywnaych w Streamlit
 
